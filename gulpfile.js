@@ -25,10 +25,11 @@ var server = require('gulp-webserver');
 var url = require('url');
 var fs = require('fs');
 var path = require('path');
+var uglify = require('gulp-uglify');
 // var sass = require('gulp-sass');
 // 合并文件
 // var concat = require('gulp-concat');
-// var minCss = require('gulp-clean-css');
+var minCss = require('gulp-clean-css');
 // var autoprefixer = requrie('gulp-autoprefixer');
 gulp.task('server',function(){
     gulp.src('src')
@@ -39,8 +40,13 @@ gulp.task('server',function(){
                 if(pathname === '/favicon.ico'){
                     return false;
                 }
-                pathname = pathname === '/' ? '/index.html' : pathname;
-                res.end(fs.readFileSync(path.join(__dirname,'src',pathname)));
+                if(pathname === '/api/list'){
+                    res.end(JSON.stringify({code:1}))
+                }else{
+                    pathname = pathname === '/' ? '/index.html' : pathname;
+                    res.end(fs.readFileSync(path.join(__dirname,'src',pathname)));
+                }
+                
             }
         }))
         
