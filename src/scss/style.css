@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+}
+
+.wrap {
+  width: 640px;
+  background: #eee;
+}
+
+.wrap header {
+  width: 100%;
+  height: 1.5rem;
+  line-height: 1.5rem;
+  display: flex;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+}
+
+.wrap header a {
+  flex: 1;
+  color: #ccc;
+}
+
+.wrap .nav {
+  display: flex;
+  background: #fff;
+  margin-top: 5px;
+}
+
+.wrap .nav dl {
+  flex: 1;
+  flex-shrink: 0;
+  margin: 10px;
+  background: #eee;
+  text-align: center;
+  border-bottom: 1px solid #ccc;
+}
+
+.wrap .nav dl dt {
+  width: 50%;
+  height: 50%;
+  margin: 10% 25%;
+}
+
+.wrap .nav dl dt img {
+  width: 100%;
+  height: 100%;
+}
+
+.wrap .nav dl dd {
+  font-size: 20px;
+}
+
+.wrap section .banner {
+  width: 90%;
+  height: 30%;
+  padding: 2% 5%;
+}
+
+.wrap footer {
+  display: flex;
+  width: 100%;
+  height: 2rem;
+  line-height: 2rem;
+  border-top: 1px solid #ccc;
+}
+
+.wrap footer dl {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+  text-align: center;
+}
+
+.wrap footer dl dt {
+  width: 50%;
+  height: 50%;
+  margin: 25%;
+  flex-shrink: 0;
+}
+
+.wrap footer dl dt img {
+  width: 100%;
+  height: 100%;
+}
